@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -18,6 +19,10 @@
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -132,6 +137,29 @@
       background: var(--accent-dark);
     }
 
+    .back-to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 46px;
+      height: 46px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      line-height: 1;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+      z-index: 999;
+    }
+
+    .back-to-top:hover {
+      background: var(--accent-dark);
+    }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -140,86 +168,136 @@
     }
 
     @media (max-width: 700px) {
+      header {
+        padding: 24px 14px 12px;
+      }
+
       .site-title {
         font-size: 34px;
+        margin-bottom: 18px;
+      }
+
+      nav {
+        padding: 10px 0;
       }
 
       nav a {
         display: inline-block;
-        margin: 8px 14px;
+        margin: 8px 10px;
+        font-size: 15px;
+      }
+
+      .section {
+        margin: 48px auto;
+        padding: 0 16px;
+      }
+
+      .section h2 {
+        font-size: 26px;
+      }
+
+      .about-text {
+        font-size: 16px;
+        line-height: 1.6;
       }
 
       .featured-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .session-card {
+        max-width: 360px;
+        margin: 0 auto;
       }
 
       .session-card img {
         height: 260px;
       }
+
+      .contact-box {
+        padding: 24px 18px;
+      }
+
+      .back-to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+        font-size: 24px;
+      }
     }
   </style>
+
 </head>
 
-<body>
+<body id="top">
 
   <header>
     <h1 class="site-title">with noeli</h1>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#sessions">Sessions</a>
-      <a href="#contact">Contact</a>
-    </nav>
+```
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#sessions">Sessions</a>
+  <a href="#contact">Contact</a>
+</nav>
+```
+
   </header>
 
   <main id="home">
 
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p class="about-text">
-        I’m Noeli. Write a short intro here about who you are, what you do,
-        and what people can expect from your sessions.
-      </p>
-    </section>
+```
+<section id="about" class="section">
+  <h2>About</h2>
+  <p class="about-text">
+    I’m Noeli. Write a short intro here about who you are, what you do,
+    and what people can expect from your sessions.
+  </p>
+</section>
 
-    <section id="sessions" class="section">
-      <h2>Featured Sessions</h2>
+<section id="sessions" class="section">
+  <h2>Featured Sessions</h2>
 
-      <div class="featured-grid">
+  <div class="featured-grid">
 
-        <div class="session-card">
-          <img src="images/kala.jpg" alt="Kayla session photo">
-          <h3>Kala</h3>
-        </div>
+    <div class="session-card">
+      <img src="images/kala.jpg" alt="Kala session photo">
+      <h3>Kala</h3>
+    </div>
 
-        <div class="session-card">
-          <img src="images/fancylady.jpg" alt="FancyLadypicture">
-          <h3>Grenadier</h3>
-        </div>
+    <div class="session-card">
+      <img src="images/fancylady.jpg" alt="Fancy lady session photo">
+      <h3>Grenadier</h3>
+    </div>
 
-        <div class="session-card">
-          <img src="images/grads.jpg" alt="Gradpicture">
-          <h3>Taynná & Pedro</h3>
-        </div>
+    <div class="session-card">
+      <img src="images/grads.jpg" alt="Graduation session photo">
+      <h3>Taynná &amp; Pedro</h3>
+    </div>
 
-      </div>
-    </section>
+  </div>
+</section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
+<section id="contact" class="section">
+  <h2>Contact</h2>
 
-      <div class="contact-box">
-        <p>Ready to book or ask a question?</p>
-        <a class="button" href="mailto:youremail@example.com">Email Me</a>
-      </div>
-    </section>
+  <div class="contact-box">
+    <p>Ready to book or ask a question?</p>
+    <a class="button" href="mailto:youremail@example.com">Email Me</a>
+  </div>
+</section>
+```
 
   </main>
 
   <footer>
     © 2026 with noeli
   </footer>
+
+<a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
 
 </body>
 </html>
