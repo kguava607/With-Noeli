@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,12 +8,12 @@
 
   <style>
     :root {
-      --bg: #f8f3ed;
+      --bg: #f3f0d8;
       --text: #2b2521;
-      --accent: #b98f73;
-      --accent-dark: #7f5f4e;
+      --accent: #aaa235;
+      --accent-dark: #787323;
       --card: #ffffff;
-      --line: #d8c7b8;
+      --line: #c9c279;
     }
 
     * {
@@ -45,7 +44,7 @@
       margin: 0 0 24px;
       font-size: 42px;
       font-weight: normal;
-      letter-spacing: 1px;
+      letter-spacing: 4px;
       text-transform: lowercase;
     }
 
@@ -54,7 +53,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 18px 50px;
+      gap: 18px 42px;
       max-width: 900px;
       margin: 0 auto;
       padding: 14px 20px;
@@ -133,6 +132,17 @@
       padding: 30px;
       background: var(--card);
       border: 1px solid var(--line);
+    }
+
+    .portfolio-link {
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .portfolio-link:hover,
+    .portfolio-link:focus {
+      border-color: var(--accent-dark);
     }
 
     .button {
@@ -257,7 +267,6 @@
       }
     }
   </style>
-
 </head>
 
 <body id="top">
@@ -265,92 +274,85 @@
   <header>
     <h1 class="site-title">with noeli</h1>
 
-
-<nav aria-label="Main navigation">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#sessions">Featured Sessions</a>
-  <a href="#portfolio">Portfolio</a>
-  <a
-    href="https://form.jotform.com/261644211761048"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Contact
-  </a>
-</nav>
-
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#sessions">Featured Sessions</a>
+      <a href="#portfolio">Portfolio</a>
+      <a
+        href="https://form.jotform.com/261644211761048"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Contact
+      </a>
+    </nav>
   </header>
 
   <main id="home">
 
-<section id="about" class="section">
-  <h2>About</h2>
+    <section id="about" class="section">
+      <h2>About</h2>
 
-  <p class="about-text">
-    I’m Noeli. Write a short introduction here about who you are,
-    what you do, and what people can expect from your sessions.
-  </p>
-</section>
+      <p class="about-text">
+        I’m Noeli. Write a short introduction here about who you are,
+        what you do, and what people can expect from your sessions.
+      </p>
+    </section>
 
-<section id="sessions" class="section">
-  <h2>Featured Sessions</h2>
+    <section id="sessions" class="section">
+      <h2>Featured Sessions</h2>
 
-  <div class="featured-grid">
+      <div class="featured-grid">
 
-    <article class="session-card">
-      <img
-        src="images/kala.jpg"
-        alt="Kala session"
+        <article class="session-card">
+          <img src="images/kala.jpg" alt="Kala session">
+          <h3>Kala</h3>
+        </article>
+
+        <article class="session-card">
+          <img src="images/fancylady.jpg" alt="Grenadier session">
+          <h3>Grenadier</h3>
+        </article>
+
+        <article class="session-card">
+          <img src="images/grads.jpg" alt="Graduation session with Taynná and Pedro">
+          <h3>Taynná &amp; Pedro</h3>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <h2>Portfolio</h2>
+
+      <a
+        class="portfolio-box portfolio-link"
+        href="https://withnoelicreative.pic-time.com/portfolio"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-      <h3>Kala</h3>
-    </article>
+        <p>View my full portfolio here.</p>
+        <span class="button">View Portfolio</span>
+      </a>
+    </section>
 
-    <article class="session-card">
-      <img
-        src="images/fancylady.jpg"
-        alt="Grenadier session"
-      >
-      <h3>Grenadier</h3>
-    </article>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
 
-    <article class="session-card">
-      <img
-        src="images/grads.jpg"
-        alt="Graduation session with Taynná and Pedro"
-      >
-      <h3>Taynná &amp; Pedro</h3>
-    </article>
+      <div class="contact-box">
+        <p>Ready to book or ask a question?</p>
 
-  </div>
-</section>
-
-<section id="portfolio" class="section">
-  <h2>Portfolio</h2>
-
-  <div class="portfolio-box">
-    <p>
-      More photography and featured work will be added here soon.
-    </p>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <h2>Contact</h2>
-
-  <div class="contact-box">
-    <p>Ready to book or ask a question?</p>
-
-    <a
-      class="button"
-      href="https://form.jotform.com/261644211761048"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Reach out
-    </a>
-  </div>
-</section>
+        <a
+          class="button"
+          href="https://form.jotform.com/261644211761048"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Reach out
+        </a>
+      </div>
+    </section>
 
   </main>
 
@@ -358,16 +360,13 @@
     &copy; 2026 with noeli
   </footer>
 
-<a
-href="#top"
-class="back-to-top"
-aria-label="Return to the top of the page"
-title="Back to top"
-
->
-
-↑
-
+  <a
+    href="#top"
+    class="back-to-top"
+    aria-label="Return to the top of the page"
+    title="Back to top"
+  >
+    ↑
   </a>
 
 </body>
